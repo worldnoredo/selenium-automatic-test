@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-05T09:38:48.407Z",
+    "end": "2021-11-05T09:38:52.858Z",
+    "duration": 4451,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "33e5564f-da52-46a8-9b23-924c747bd83d",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "1e0274d5-5eaf-4a9c-81e4-7f08a9b34d52",
+        "title": "Google search automated testing",
+        "fullFile": "E:\\selenium test\\test\\homePage.test.js",
+        "file": "\\test\\homePage.test.js",
+        "beforeHooks": [
+          {
+            "title": "\"before each\" hook",
+            "fullTitle": "Google search automated testing \"before each\" hook",
+            "timedOut": false,
+            "duration": 1538,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "page = new Page();\ndriver = page.driver;\nawait page.visit('https://www.google.com/');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "ee1dba21-6096-4601-9e20-a053787369b3",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after each\" hook",
+            "fullTitle": "Google search automated testing \"after each\" hook",
+            "timedOut": false,
+            "duration": 69,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "await page.quit();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "ea1f08c4-447b-4b24-85f3-c7dfa61934ef",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "find the input box and google search button",
+            "fullTitle": "Google search automated testing find the input box and google search button",
+            "timedOut": false,
+            "duration": 59,
+            "state": "passed",
+            "speed": "medium",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const result = await page.findInputAndButton();\nexpect(result.inputEnabled).to.equal(true);\nexpect(result.buttonText).to.include('Google');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "f0688dc8-414d-4855-9784-09216e56fc00",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "put keyword in search box and click search button",
+            "fullTitle": "Google search automated testing put keyword in search box and click search button",
+            "timedOut": false,
+            "duration": 1274,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const result = await page.submitKeywordAndGetResult();\nexpect(result.length).to.be.above(10);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "169fe92f-9b8b-44af-806d-a6391b39e161",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "f0688dc8-414d-4855-9784-09216e56fc00",
+          "169fe92f-9b8b-44af-806d-a6391b39e161"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 1333,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 50000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2021
+}
