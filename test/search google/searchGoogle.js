@@ -1,5 +1,5 @@
 let Page = require('../../lib/basePage');
-const locator = require('../../utils/locator');
+const locator = require('./locator');
 const fake = require('../../utils/fakeData');
 const { Key } = require('selenium-webdriver');
 

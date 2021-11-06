@@ -1,5 +1,5 @@
 const { describe, it } = require('mocha');
-const Page = require('./search google/homePage');
+const Page = require('./search google/searchGoogle');
 
 const chai = require('chai');
 const expect = chai.expect;
