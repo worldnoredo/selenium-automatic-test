@@ -12,7 +12,7 @@ Page.prototype.goToShop = async function () {
   return await shopContent.isEnabled();
 };
 
-Page.prototype.orderPapularity = async function () {
+Page.prototype.orderPopularity = async function () {
     shopButton = await this.findById(locator.shopId);
     await shopButton.click();
 
@@ -21,7 +21,7 @@ Page.prototype.orderPapularity = async function () {
     let order = (await formOrder.findElements(By.css("option")))[1];
     await order.click();
     let newContent = await this.findById(locator.shopContentId);
-    return (oldContent.getSize() != newContent.getSize());
+    return (oldContent != newContent);
 };
 
 Page.prototype.addCart = async function () {
